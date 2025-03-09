@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import Link from "next/link"
 import React, { useEffect } from "react"
@@ -19,7 +20,7 @@ export default function SignupPage (){
     const onSignup = async () => {
         try {
             setLoading(true)
-            const response = axios.post("/api/users/signup", user);
+            const response = await axios.post("/api/users/signup", user);
             console.log("SignUp success", response.data)
             router.push('/login')
 

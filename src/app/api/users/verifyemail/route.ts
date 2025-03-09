@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {connect} from "@/dbConfig/dbConfig"
 import { NextRequest, NextResponse } from "next/server";
 import User from "@/models/userModel";
-import { error } from "console";
 
 connect();
 
